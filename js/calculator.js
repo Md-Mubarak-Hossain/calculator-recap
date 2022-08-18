@@ -1,3 +1,4 @@
+
 function inputNumber(elementId) {
     return parseFloat(document.getElementById(elementId).innerText);
 
@@ -14,30 +15,23 @@ function tangentMathOperator(elementId) {
 
 document.getElementById('log').addEventListener('click', function () {
     document.getElementById('text-field').value += 'Math.' + tangentMathOperator('log') + '(';
-    // console.log('Math.' + tangentMathOperator('cos') + '(');
-
 })
 
 document.getElementById('sin').addEventListener('click', function () {
     document.getElementById('text-field').value += 'Math.' + tangentMathOperator('sin') + '(';
-    // console.log('Math.' + tangentMathOperator('cos') + '(');
-
 })
 
 document.getElementById('cos').addEventListener('click', function () {
     document.getElementById('text-field').value += 'Math.' + tangentMathOperator('cos') + '(';
-    // console.log('Math.' + tangentMathOperator('cos') + '(');
-
 })
 
 document.getElementById('ten').addEventListener('click', function () {
     document.getElementById('text-field').value += 'Math.' + tangentMathOperator('ten') + '(';
-    // console.log('Math.' + tangentMathOperator('cos') + '(');
-
 })
 
-// accept digit
 
+
+// accept digit
 document.getElementById('number-1').addEventListener('click', function () {
     document.getElementById('text-field').value += inputNumber('number-1');
 
@@ -75,27 +69,22 @@ document.getElementById('number-7').addEventListener('click', function () {
 
 document.getElementById('number-8').addEventListener('click', function () {
     document.getElementById('text-field').value += inputNumber('number-8');
-
 })
 
 document.getElementById('number-9').addEventListener('click', function () {
     document.getElementById('text-field').value += inputNumber('number-9');
-
 })
 
 document.getElementById('number-0').addEventListener('click', function () {
     document.getElementById('text-field').value += inputNumber('number-0');
-
 })
 
 // accept operator
 document.getElementById('operator-(').addEventListener('click', function () {
     document.getElementById('text-field').value += inputOperator('operator-(');
-
 })
 document.getElementById('operator-)').addEventListener('click', function () {
     document.getElementById('text-field').value += inputOperator('operator-)');
-
 })
 document.getElementById('operator-+').addEventListener('click', function () {
     document.getElementById('text-field').value += inputOperator('operator-+');
@@ -145,7 +134,6 @@ function doMath(elementId) {
 
 document.getElementById('operator-=').addEventListener('click', function () {
     let output = doMath('operator-=');
-    // document.getElementById('text-field').value = eval(output);
     document.getElementById('text-field').value = '';
     document.getElementById('text-field').value = eval(output).toFixed(2);
 })
